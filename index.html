@@ -1,80 +1,479 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>7 Dias Sem Ansiedade</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1533648932876-44a2f60aa8d6?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      background: rgba(0,0,0,0.7);
-      padding: 30px;
-      max-width: 600px;
-      margin: auto;
-      border-radius: 10px;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-    .botao {
-      background-color: #00cc99;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .depoimentos {
-      margin-top: 30px;
-      text-align: left;
-    }
-    .depoimento {
-      background: rgba(255,255,255,0.1);
-      padding: 10px;
-      border-left: 5px solid #00cc99;
-      margin-bottom: 10px;
-    }
-    .garantia {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #00ffcc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vença a Ansiedade - Transforme Sua Vida Hoje</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-cta {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+      
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <h1>7 Dias Sem Ansiedade</h1>
-    <p><strong>Descubra como controlar a ansiedade de forma natural e eficaz em apenas 7 dias.</strong></p>
-    <p>Transforme sua rotina, durma melhor e recupere sua paz interior com um método comprovado e acessível.</p>
+<body class="bg-gray-50">
+    <!-- Header Hero -->
+    <header class="gradient-bg text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="text-6xl mb-6 floating">🧠✨</div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Vença a <span class="text-yellow-300">Ansiedade</span> de Uma Vez Por Todas
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+                        Descubra o método comprovado que já transformou a vida de milhares de pessoas. Liberte-se da ansiedade e recupere sua paz interior.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-lg">Técnicas cientificamente comprovadas</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-lg">Resultados em apenas 30 dias</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-lg">Suporte especializado incluído</span>
+                        </div>
+                    </div>
+                    <a href="https://pay.hotmart.com/A100484373E" target="_blank" class="gradient-cta text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all pulse-button inline-block">
+                        🚀 QUERO VENCER A ANSIEDADE AGORA
+                    </a>
+                    <p class="text-sm mt-4 opacity-75">⚡ Acesso imediato • 💳 Parcelamento disponível</p>
+                </div>
+                <div class="text-center lg:text-right">
+                    <div class="text-9xl floating">🌟</div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mt-8">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-2xl font-bold mb-4">Mais de 10.000 vidas transformadas</h3>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-3xl font-bold text-yellow-300">98%</div>
+                                <div class="text-sm opacity-75">Satisfação</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-yellow-300">30</div>
+                                <div class="text-sm opacity-75">Dias</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-yellow-300">24/7</div>
+                                <div class="text-sm opacity-75">Suporte</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <a class="botao" href="https://pay.hotmart.com/A100484373E" target="_blank">Quero Começar Agora</a>
+    <!-- Problema -->
+    <section class="py-20 bg-red-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                    Você Reconhece Estes Sinais? 😰
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400">
+                        <div class="text-3xl mb-3">💔</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Coração Acelerado</h3>
+                        <p class="text-gray-600 text-sm">Palpitações constantes que te deixam em pânico</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400">
+                        <div class="text-3xl mb-3">😴</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Noites em Claro</h3>
+                        <p class="text-gray-600 text-sm">Mente acelerada que não te deixa descansar</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400">
+                        <div class="text-3xl mb-3">🏃‍♂️</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Evitar Situações</h3>
+                        <p class="text-gray-600 text-sm">Fugir de compromissos por medo e insegurança</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400">
+                        <div class="text-3xl mb-3">🤯</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Pensamentos Negativos</h3>
+                        <p class="text-gray-600 text-sm">Cenários catastróficos que dominam sua mente</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400">
+                        <div class="text-3xl mb-3">😔</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Isolamento Social</h3>
+                        <p class="text-gray-600 text-sm">Perder conexões importantes por causa do medo</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400">
+                        <div class="text-3xl mb-3">⚡</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Ataques de Pânico</h3>
+                        <p class="text-gray-600 text-sm">Momentos de terror que parecem não ter fim</p>
+                    </div>
+                </div>
+                <div class="bg-red-100 border border-red-300 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-red-800 mb-4">⏰ A Ansiedade Está Roubando Sua Vida!</h3>
+                    <p class="text-lg text-red-700 mb-6">
+                        Cada dia que passa sem tratamento adequado, você perde oportunidades, relacionamentos e momentos preciosos. 
+                        <strong>Não deixe a ansiedade controlar mais um dia da sua vida!</strong>
+                    </p>
+                    <a href="https://pay.hotmart.com/A100484373E" target="_blank" class="gradient-cta text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all inline-block">
+                        💪 QUERO MUDAR ISSO AGORA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="depoimentos">
-      <h2>O que estão dizendo:</h2>
-      <div class="depoimento">“Em menos de uma semana minha mente ficou muito mais leve. Recomendo!” – Fernanda R.</div>
-      <div class="depoimento">“Simples, prático e direto ao ponto. Ansiedade sob controle!” – Marcos S.</div>
-      <div class="depoimento">“Já tinha tentado de tudo, esse método realmente funcionou.” – Luana T.</div>
-    </div>
+    <!-- Solução -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        A Solução Que Você Estava Procurando 🎯
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Um método completo e comprovado que combina as melhores técnicas da psicologia moderna 
+                        para eliminar a ansiedade da sua vida de forma definitiva.
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center card-hover bg-blue-50 p-8 rounded-2xl">
+                        <div class="text-5xl mb-6">🧠</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Reprogramação Mental</h3>
+                        <p class="text-gray-600">
+                            Técnicas avançadas de neuroplasticidade para reprogramar padrões de pensamento ansiosos 
+                            e criar novos caminhos neurais saudáveis.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center card-hover bg-green-50 p-8 rounded-2xl">
+                        <div class="text-5xl mb-6">🎯</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Estratégias Práticas</h3>
+                        <p class="text-gray-600">
+                            Ferramentas práticas que você pode usar imediatamente em situações de crise, 
+                            com exercícios simples e eficazes.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center card-hover bg-purple-50 p-8 rounded-2xl">
+                        <div class="text-5xl mb-6">🌱</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Transformação Duradoura</h3>
+                        <p class="text-gray-600">
+                            Não apenas alívio temporário, mas uma mudança profunda e permanente 
+                            na sua relação com a ansiedade.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="https://pay.hotmart.com/A100484373E" target="_blank" class="gradient-cta text-white px-12 py-6 rounded-full font-bold text-2xl hover:shadow-2xl transition-all pulse-button inline-block">
+                        🔥 QUERO ACESSO COMPLETO AGORA
+                    </a>
+                    <p class="text-gray-500 mt-4">✅ Garantia de 7 dias • 🔒 Compra 100% segura</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="garantia">
-      Garantia de 7 dias: sua satisfação ou seu dinheiro de volta!
-    </div>
-  </div>
-</body>
+    <!-- Depoimentos -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-16">
+                Vidas Transformadas 💫
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-400 rounded-full flex items-center justify-center text-white font-bold">M</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Maria Silva</h4>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Depois de anos sofrendo com ansiedade, finalmente encontrei a solução. 
+                        Em 3 semanas já sentia uma diferença incrível. Hoje vivo sem medo!"
+                    </p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold">J</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">João Santos</h4>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Os ataques de pânico eram constantes. Hoje posso dizer que sou uma pessoa 
+                        completamente diferente. Método realmente funciona!"
+                    </p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Ana Costa</h4>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Voltei a dormir bem, a sair com amigos e a viver plenamente. 
+                        Melhor investimento que já fiz na minha vida!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgência -->
+    <section class="py-20 bg-gradient-to-r from-red-500 to-pink-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                    ⏰ Oferta Por Tempo Limitado!
+                </h2>
+                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 mb-8">
+                    <div class="text-6xl mb-4">🔥</div>
+                    <h3 class="text-3xl font-bold mb-4">DESCONTO ESPECIAL</h3>
+                    <p class="text-xl mb-6">
+                        Apenas hoje você tem acesso ao método completo com <strong>desconto exclusivo</strong>. 
+                        Amanhã o preço volta ao normal!
+                    </p>
+                    <div class="text-4xl font-bold mb-2">
+                        <span class="line-through opacity-60">R$ 99,99</span>
+                    </div>
+                    <div class="text-6xl font-bold text-yellow-300 mb-4">
+                        R$ 29,90
+                    </div>
+                    <p class="text-lg opacity-90">ou 3x de R$ 9,97</p>
+                </div>
+                
+                <a href="https://pay.hotmart.com/A100484373E" target="_blank" class="bg-white text-red-600 px-12 py-6 rounded-full font-bold text-2xl hover:bg-gray-100 transition-all pulse-button inline-block shadow-2xl">
+                    🚀 GARANTIR MINHA VAGA AGORA
+                </a>
+                
+                <div class="mt-8 grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                    <div class="flex items-center justify-center space-x-2">
+                        <span class="text-2xl">🔒</span>
+                        <span>Compra Segura</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <span class="text-2xl">⚡</span>
+                        <span>Acesso Imediato</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <span class="text-2xl">✅</span>
+                        <span>Garantia 7 dias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-16">
+                Perguntas Frequentes 🤔
+            </h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <button onclick="toggleFaq(1)" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-gray-800">Como funciona o método?</h3>
+                        <span id="icon-1" class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-1" class="hidden mt-4 text-gray-600">
+                        <p>O método combina técnicas de terapia cognitivo-comportamental, mindfulness e neuroplasticidade em um programa estruturado de 30 dias. Você receberá vídeo-aulas, exercícios práticos e suporte especializado.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <button onclick="toggleFaq(2)" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-gray-800">Em quanto tempo verei resultados?</h3>
+                        <span id="icon-2" class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-2" class="hidden mt-4 text-gray-600">
+                        <p>A maioria dos nossos alunos relatam melhorias significativas já na primeira semana. Resultados mais profundos e duradouros são observados entre 21 a 30 dias de prática consistente.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <button onclick="toggleFaq(3)" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-gray-800">E se não funcionar para mim?</h3>
+                        <span id="icon-3" class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-3" class="hidden mt-4 text-gray-600">
+                        <p>Oferecemos garantia incondicional de 7 dias. Se por qualquer motivo você não estiver satisfeito, devolvemos 100% do seu dinheiro, sem perguntas ou burocracias.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <button onclick="toggleFaq(4)" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-gray-800">Preciso de conhecimento prévio?</h3>
+                        <span id="icon-4" class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-4" class="hidden mt-4 text-gray-600">
+                        <p>Não! O método foi desenvolvido para pessoas comuns, sem conhecimento técnico. Tudo é explicado de forma simples e prática, com exemplos do dia a dia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                    Sua Nova Vida Começa Agora! 🌟
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Não deixe a ansiedade roubar mais um dia da sua vida. 
+                    Milhares de pessoas já transformaram suas vidas com este método.
+                </p>
+                
+                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 mb-8 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">🎁 Você Vai Receber:</h3>
+                    <ul class="text-left space-y-2 text-lg">
+                        <li>✅ Método completo em vídeo-aulas</li>
+                        <li>✅ Exercícios práticos diários</li>
+                        <li>✅ Suporte especializado</li>
+                        <li>✅ Garantia de 7 dias</li>
+                        <li>✅ Acesso vitalício</li>
+                        <li>✅ Bônus exclusivos</li>
+                    </ul>
+                </div>
+                
+                <a href="https://pay.hotmart.com/A100484373E" target="_blank" class="gradient-cta text-white px-12 py-6 rounded-full font-bold text-2xl hover:shadow-2xl transition-all pulse-button inline-block mb-6">
+                    🔥 SIM, QUERO VENCER A ANSIEDADE!
+                </a>
+                
+                <p class="text-lg opacity-75">
+                    ⚡ Últimas vagas disponíveis • 🔒 Pagamento 100% seguro
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4">💜 Transforme Sua Vida Hoje</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Este conteúdo tem fins educacionais e não substitui acompanhamento médico profissional. 
+                    Em casos graves, procure sempre um especialista.
+                </p>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-500">
+                    © 2024 - Todos os direitos reservados. Feito com 💙 para transformar vidas.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(num) {
+            const faq = document.getElementById(`faq-${num}`);
+            const icon = document.getElementById(`icon-${num}`);
+            
+            if (faq.classList.contains('hidden')) {
+                faq.classList.remove('hidden');
+                icon.textContent = '-';
+            } else {
+                faq.classList.add('hidden');
+                icon.textContent = '+';
+            }
+        }
+
+        // Animação de fade-in ao rolar a página
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96960d34606d6d39',t:'MTc1NDIyNjU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
